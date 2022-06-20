@@ -11,15 +11,15 @@ def welcome():
    return render_template('welcome.html')   
 
 
-@app.route('/infinity')
-def log_sales():
-    return render_template('log_sales.html', clients = clients, sales = sales)  
+@app.route('/data')
+def display():
+    return render_template('display.html')  
 
 # AJAX FUNCTIONS
 # ajax for log_sales.js
 
-@app.route('/save_sale', methods = ['GET', 'POST'])
-def save_sale():
+@app.route('/add_emails', methods = ['GET', 'POST'])
+def add_emails():
     global current_id
     global sales
     global clients
